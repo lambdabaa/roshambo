@@ -1,0 +1,70 @@
+.panels {
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.panel {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 15px;
+  width: 50%;
+}
+
+.panel:first-child {
+  border-right: 1px solid #999;
+}
+
+.play {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 32px;
+  height: 400px;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.play-green {
+  color: green;
+}
+
+.play-red {
+  color: red;
+}
+
+.play-yellow {
+  color: blue;
+}
+
+.controls {
+  display: -webkit-flex;
+  display: flex;
+  font-style: italic;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  padding: 5px;
+}
+
+.btn:hover {
+  color: purple;
+}

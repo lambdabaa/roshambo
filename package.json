@@ -1,0 +1,26 @@
+{
+  "name": "rps",
+  "version": "0.0.0",
+  "author": "Ari Aye <gareth@alumni.middlebury.edu>",
+
+  "scripts": {
+    "build": "make -j2",
+    "test": "flow"
+  },
+
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-3": "6.17.0",
+    "browserify": "13.1.1",
+    "firebase": "2.4.2",
+    "lodash": "4.17.2",
+    "react": "15.4.1",
+    "react-dom": "15.4.1",
+    "react-redux": "4.4.6",
+    "redux": "3.6.0",
+    "flow-bin": "0.36.0"
+  }
+}
