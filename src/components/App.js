@@ -1,6 +1,8 @@
 // @flow
 
+const Header = require('./Header');
 const React = require('react');
+const colorUuid = require('../colorUuid');
 const {connect} = require('react-redux');
 const identity = require('lodash/identity');
 const play = require('../play');
@@ -34,24 +36,40 @@ function App(props: Object): React.Element<any> {
       break;
   }
 
-  return <div className="panels">
-    <div className="panel player">
-      <h1>PLAYER ({props.score.player})</h1>
-      <div className={`play play-${playerColor}`}>
-        {props.prev.player.toUpperCase()}
+  return <div className="app">
+    <Header />
+    <div className="panels">
+      <div className="panel play-panel player">
+        <h1>PLAYER ({props.score.player})</h1>
+        <div className={`play play-${playerColor}`}>
+          {props.prev.player.toUpperCase()}
+        </div>
+        <div className="controls">
+          <div className="btn" onClick={rock}>ROCK</div>
+          <div className="btn" onClick={paper}>PAPER</div>
+          <div className="btn" onClick={scissor}>SCISSOR</div>
+        </div>
       </div>
-      <div className="controls">
-        <div className="btn" onClick={rock}>ROCK</div>
-        <div className="btn" onClick={paper}>PAPER</div>
-        <div className="btn" onClick={scissor}>SCISSOR</div>
+      <div className="panel play-panel computer">
+        <h1>COMPUTER ({props.score.computer})</h1>
+        <div className={`play play-${computerColor}`}>
+          {props.prev.computer.toUpperCase()}
+        </div>
+        <div className="controls">
+        </div>
       </div>
-    </div>
-    <div className="panel computer">
-      <h1>COMPUTER ({props.score.computer})</h1>
-      <div className={`play play-${computerColor}`}>
-        {props.prev.computer.toUpperCase()}
-      </div>
-      <div className="controls">
+      <div className="panel scores">
+        {
+          props.leaderboard.map((record: Array<any>): React.Element<any> => {
+            return <div className="record">
+              <div className="record-user">{colorUuid(record[0])}</div>
+              <div className="record-score"
+                   style={{color: record[1] > 0 ? 'green' : 'red'}}>
+                {record[1]}
+              </div>
+            </div>
+          })
+        }
       </div>
     </div>
   </div>;

@@ -12,15 +12,17 @@
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   padding: 15px;
-  width: 50%;
+  width: calc(33.33% - 1px);
 }
 
-.panel:first-child {
-  border-right: 1px solid #999;
+.play-panel {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.panel + .panel {
+  border-left: 1px solid #999;
 }
 
 .play {
@@ -67,4 +69,20 @@
 
 .btn:hover {
   color: purple;
+}
+
+.scores {
+  background-color: black;
+}
+
+.record {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.record-score {
+  margin-left: 15px;
 }

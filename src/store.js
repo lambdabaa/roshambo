@@ -2,6 +2,7 @@
 
 const {createStore} = require('redux');
 const merge = require('lodash/merge');
+const uuid = require('./uuid');
 
 type Action = {
   type: 'DEEP' | 'SHALLOW';
@@ -9,6 +10,8 @@ type Action = {
 };
 
 const initialState = {
+  id: uuid(),
+  leaderboard: [],
   history: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   prev: {
     computer: 'rock',

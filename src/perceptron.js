@@ -3,13 +3,13 @@
 const Firebase = require('firebase/lib/firebase-web');
 const debug = console.log.bind(console, '[perceptron]');
 
+type Perceptron = {
+  w: Array<number>;
+  b: number;
+};
+
 function perceptron(name: string) {
   const ref = new Firebase('https://roshambo-6970c.firebaseio.com').child(name);
-
-  type Perceptron = {
-    w: Array<number>;
-    b: number;
-  };
 
   async function prediction(x: Array<number>): Promise<number> {
     debug(`Making prediction for ${JSON.stringify(x)}`);

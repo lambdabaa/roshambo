@@ -1,6 +1,8 @@
 // @flow
 
+const calculateScore = require('./calculateScore');
 const debug = console.log.bind(console, '[play]');
+const leaderboard = require('./leaderboard');
 const perceptron = require('./perceptron');
 const state = require('./state');
 const sum = require('lodash/sum');
@@ -48,6 +50,8 @@ async function play(move: string): Promise<void> {
     },
     score: {computer, player}
   });
+
+  leaderboard.update(aState.id, calculateScore(state.get()));
 }
 
 async function getComputerMove(x: Array<number>): Promise<number> {

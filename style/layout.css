@@ -1,6 +1,7 @@
 html, body, .container {
   background-color: #eee;
   height: 100%;
+  font-family: Sans-Serif;
   margin: 0;
   width: 100%;
 }
