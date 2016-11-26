@@ -1,0 +1,143 @@
+.panels {
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.panel {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 15px;
+  width: calc(33.33% - 1px);
+}
+
+.play-panel {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.panel + .panel {
+  border-left: 1px solid #999;
+}
+
+.play {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 32px;
+  height: 400px;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.play-green {
+  color: green;
+}
+
+.play-red {
+  color: red;
+}
+
+.play-yellow {
+  color: blue;
+}
+
+.controls {
+  display: -webkit-flex;
+  display: flex;
+  font-style: italic;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  padding: 5px;
+}
+
+.btn:hover {
+  color: purple;
+}
+
+.scores {
+  background-color: black;
+}
+
+.record {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.record-score {
+  margin-left: 15px;
+}
+html, body, .container {
+  background-color: #eee;
+  height: 100%;
+  font-family: Sans-Serif;
+  margin: 0;
+  width: 100%;
+}
+.header {
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #3996f0;
+  color: white;
+  display: -webkit-flex;
+  display: flex;
+  height: 50px;
+  padding: 15px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+}
+
+.branding {
+  font-size: 48px;
+  font-style: italic;
+}
+
+.stats {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.stat {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.stats-id {
+  width: 350px;
+}
+
+.stats-score {
+  width: 50px;
+}
+
+.stats-key {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5px;
+  text-decoration: underline;
+}
